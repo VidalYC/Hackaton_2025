@@ -1,0 +1,48 @@
+{
+  "fecha_analisis": "2025-08-08 19:09:11",
+  "insights_historicos": {
+    "departamento_lider": {
+      "nombre": "Atlántico",
+      "produccion_total": "675801",
+      "porcentaje": 25.7
+    },
+    "tecnologia_dominante": {
+      "solar": "1439113",
+      "eolica": "1193318",
+      "lider": "Solar"
+    },
+    "estacionalidad": {
+      "mejor_mes": "1",
+      "peor_mes": "4",
+      "diferencia": "65294"
+    }
+  },
+  "insights_predicciones": {
+    "cambio_promedio_ml": 4.964071291088133,
+    "cambio_promedio_prophet": 6.011774843227527,
+    "liderazgo_consistente": false,
+    "nuevo_lider": "La Guajira",
+    "tecnologia_lider_futuro": "Eólica",
+    "tecnologia_consistente": false,
+    "recomendaciones": [
+      "Considerar incrementar inversión en La Guajira como nuevo líder emergente",
+      "Priorizar desarrollo de tecnología Eólica",
+      "Mantener estrategia actual con crecimiento estable",
+      "Implementar sistema de monitoreo predictivo continuo"
+    ]
+  },
+  "metricas_modelo": {
+    "ml": {
+      "mae": 258.3687050490889,
+      "rmse": 321.1897205188486,
+      "r2": 0.6055096221925096,
+      "mape": 27.02722142995173
+    }
+  },
+  "recomendaciones": [
+    "Considerar incrementar inversión en La Guajira como nuevo líder emergente",
+    "Priorizar desarrollo de tecnología Eólica",
+    "Mantener estrategia actual con crecimiento estable",
+    "Implementar sistema de monitoreo predictivo continuo"
+  ]
+}

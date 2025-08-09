@@ -16,6 +16,7 @@ class DataLoader:
                 .str.decode("utf-8")
             )
             print("✅ Datos cargados exitosamente")
+            print(f"📄 Archivo cargado: {os.path.basename(self.data_path)}")
             print(f"📊 Dimensiones: {self.df.shape}")
             return True
         except FileNotFoundError:
