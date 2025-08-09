@@ -1,0 +1,15 @@
+{
+  "departamento_lider": {
+    "nombre": "La Guajira",
+    "produccion_total": 696794,
+    "porcentaje": 26.5
+  },
+  "tecnologia_dominante": {
+    "lider": "Solar",
+    "produccion_total": 1439113
+  },
+  "estacionalidad": {
+    "mejor_mes": 1,
+    "produccion_total": 239770
+  }
+}

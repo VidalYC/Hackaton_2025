@@ -1,15 +1,13 @@
-# src/backend/data_processing/main.py - VERSIÓN ACTUALIZADA CON PREDICCIONES
-
 import os
-from data_loader import DataLoader
-from eda import EnergyEDA
-from insights import InsightsGenerator
-from exporter import DataExporter
-import traceback  # 👈 Nueva importación para mostrar tracebacks
+import traceback  # Para mostrar tracebacks
+from data_processing.import_export_Data.data_loader import DataLoader
+from data_processing.eda.eda import EnergyEDA
+from data_processing.eda.insights import InsightsGenerator
+from data_processing.import_export_Data.exporter import DataExporter
+from machine_learning.predictor.energy_predictor import EnergyPredictor
+from machine_learning.predictor_insights.prediction_insights import PredictionInsightsGenerator
 
-# 👈 NUEVAS IMPORTACIONES PARA PREDICCIONES
-from predictor import EnergyPredictor
-from prediction_insights import PredictionInsightsGenerator
+
 
 
 def main():
@@ -24,10 +22,11 @@ def main():
     # CONFIGURACIÓN DE RUTAS (sin cambios)
     # ========================================
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "..", ".."))
+    ROOT_DIR = BASE_DIR  # No subir carpetas
     DATA_PATH = os.path.join(
         ROOT_DIR, "data", "raw", "dataset_energia_completo_2050_registros.csv"
     )
+
     EXPORT_DIR = os.path.join(ROOT_DIR, "data", "processed")
     PREDICTIONS_DIR = os.path.join(
         ROOT_DIR, "data", "predictions"
