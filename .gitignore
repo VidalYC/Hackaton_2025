@@ -11,3 +11,4 @@ venv/
 
 # Configuración local de VS Code
 .vscode/
+.env
