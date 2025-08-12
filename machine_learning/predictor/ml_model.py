@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 from datetime import timedelta
@@ -59,7 +60,7 @@ def predict_with_ml(self, horizon_weeks=None):
         {"feature": feature_columns, "importance": rf_model.feature_importances_}
     ).sort_values("importance", ascending=False)
 
-    ml_predictions = _generate_ml_future_predictions(
+    ml_predictions = _generate_ml_future_predictions_with_wave(
         self, rf_model, clean_data, feature_columns, horizon_weeks
     )
 
@@ -70,53 +71,63 @@ def predict_with_ml(self, horizon_weeks=None):
     return ml_predictions
 
 
-def _generate_ml_future_predictions(self, model, data, feature_columns, horizon_weeks):
+def _generate_ml_future_predictions_with_wave(
+    self, model, data, feature_columns, horizon_weeks
+):
     predictions = []
     last_date = data["fecha"].max()
 
-    # pasar horizonte en semanas -> días
+    # Promedios históricos por mes
+    monthly_means = data.groupby("mes")["produccion_mwh"].mean().to_dict()
+
     horizon_days = int(horizon_weeks) * 7
     future_dates = pd.date_range(
         start=last_date + pd.Timedelta(days=1), periods=horizon_days, freq="D"
     )
 
-    # agrupar por departamento+tecnologia
     for (dept, tech), group in data.groupby(["departamento", "tecnologia"]):
         if len(group) < 3:
             continue
 
         group = group.sort_values("fecha")
         last_obs = group.iloc[-1].copy()
-
-        # historia para lags: tomar últimas 4 observaciones reales (o menos si no hay)
         history = list(group["produccion_mwh"].tail(4).tolist())
 
-        for future_date in future_dates:
-            # empezamos desde los features estáticos de la última observación
+        for i, future_date in enumerate(future_dates):
             new_row = last_obs[feature_columns].copy()
 
-            # actualizar fechas/estacionales
             new_row["mes"] = future_date.month
             new_row["trimestre"] = future_date.quarter
-            # .isocalendar().week es compatible con pandas.Timestamp en versiones recientes
             new_row["semana_año"] = future_date.isocalendar().week
             new_row["mes_sin"] = np.sin(2 * np.pi * new_row["mes"] / 12)
             new_row["mes_cos"] = np.cos(2 * np.pi * new_row["mes"] / 12)
             new_row["semana_sin"] = np.sin(2 * np.pi * new_row["semana_año"] / 52)
             new_row["semana_cos"] = np.cos(2 * np.pi * new_row["semana_año"] / 52)
 
-            # actualizar lags a partir de 'history' (recursivo)
             new_row["produccion_lag_1"] = history[-1] if len(history) >= 1 else 0.0
             new_row["produccion_lag_2"] = history[-2] if len(history) >= 2 else 0.0
             new_row["produccion_ma_4"] = (
                 float(np.mean(history[-4:])) if len(history) >= 1 else 0.0
             )
 
-            # crear DataFrame con el orden correcto de columnas que usó el modelo
             X_row = pd.DataFrame([new_row])[feature_columns]
-
             pred_value = model.predict(X_row)[0]
             pred_value = max(0.0, pred_value)
+
+            # Ajuste por promedio mensual histórico
+            if new_row["mes"] in monthly_means:
+                pred_value *= monthly_means[new_row["mes"]] / np.mean(
+                    list(monthly_means.values())
+                )
+
+            # Patrón estacional suavizado tipo onda
+            seasonal_factor = 1 + 0.05 * np.sin(2 * np.pi * (i / 30))
+
+            # Ruido aleatorio controlado
+            noise = np.random.normal(1, 0.015)
+
+            # Aplicar ajuste
+            pred_value *= seasonal_factor * noise
 
             predictions.append(
                 {
@@ -127,9 +138,7 @@ def _generate_ml_future_predictions(self, model, data, feature_columns, horizon_
                 }
             )
 
-            # actualizar historial con la predicción (para next-step recursion)
             history.append(pred_value)
-            # opcional: mantener solo las últimas N entradas
             if len(history) > 20:
                 history = history[-20:]
 

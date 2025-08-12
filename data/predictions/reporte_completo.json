@@ -1,5 +1,5 @@
 {
-  "fecha_analisis": "2025-08-11 15:14:50",
+  "fecha_analisis": "2025-08-11 19:27:37",
   "insights_historicos": {
     "departamento_lider": {
       "nombre": "Atlántico",
@@ -18,7 +18,7 @@
     }
   },
   "insights_predicciones": {
-    "cambio_promedio_ml": 10.93216960530759,
+    "cambio_promedio_ml": -1.3395072407352215,
     "cambio_promedio_prophet": 6.011774843227527,
     "liderazgo_consistente": true,
     "nuevo_lider": "Atlántico",
@@ -27,7 +27,7 @@
     "recomendaciones": [
       "Mantener inversión en Atlántico que conserva el liderazgo",
       "Priorizar desarrollo de tecnología Eólica",
-      "Preparar infraestructura para crecimiento proyectado",
+      "Mantener estrategia actual con crecimiento estable",
       "Implementar sistema de monitoreo predictivo continuo"
     ]
   },
@@ -42,7 +42,7 @@
   "recomendaciones": [
     "Mantener inversión en Atlántico que conserva el liderazgo",
     "Priorizar desarrollo de tecnología Eólica",
-    "Preparar infraestructura para crecimiento proyectado",
+    "Mantener estrategia actual con crecimiento estable",
     "Implementar sistema de monitoreo predictivo continuo"
   ]
 }

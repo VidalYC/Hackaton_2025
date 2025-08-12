@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 
+
 class DataExporter:
     def __init__(self, df, export_dir):
         self.df = df
@@ -14,6 +15,19 @@ class DataExporter:
         export_df["mes"] = export_df["fecha"].dt.month
         export_df["trimestre"] = export_df["fecha"].dt.quarter
         export_df["semana"] = export_df["fecha"].dt.isocalendar().week
+
+        # Nueva columna: estación del año
+        def get_season(month):
+            if month in [12, 1, 2]:
+                return "Invierno"
+            elif month in [3, 4, 5]:
+                return "Primavera"
+            elif month in [6, 7, 8]:
+                return "Verano"
+            else:
+                return "Otoño"
+
+        export_df["estacion"] = export_df["mes"].apply(get_season)
 
         export_path = os.path.join(self.export_dir, "energia_produccion_clean.csv")
         export_df.to_csv(export_path, index=False)
