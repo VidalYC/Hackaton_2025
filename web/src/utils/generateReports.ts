@@ -35,6 +35,7 @@ export function generateAllReports() {
 
       const prodMensual = rawData.insights_historicos.analisis_temporal.patrones_mensuales;
       let y = 30;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       Object.entries(prodMensual).forEach(([mes, info]: any) => {
         doc.text(`Mes ${mes}: Promedio ${Math.round(info.promedio)} MWh`, 10, y);
         y += 8;

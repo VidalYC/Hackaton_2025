@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, BarChart3, TrendingUp } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 interface DashboardCardProps {
   dashboard: {
@@ -22,10 +22,21 @@ const DashboardCard: React.FC<DashboardCardProps> = ({ dashboard }) => (
     } p-6 text-white`}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-2xl font-bold">{dashboard.title}</h3>
-        <button className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-3 py-2 rounded-lg transition-colors">
+        <a
+          href={
+            dashboard.id === 'production'
+              ? 'https://lookerstudio.google.com/embed/reporting/6722b217-4379-4554-b08b-452cbdab5cba/page/p_qwyqx9h6ud'
+              : dashboard.id === 'growth'
+              ? 'https://lookerstudio.google.com/embed/reporting/6722b217-4379-4554-b08b-452cbdab5cba/page/p_miqjfe46ud'
+              : '#'
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-3 py-2 rounded-lg transition-colors"
+        >
           <ExternalLink className="w-4 h-4" />
           <span className="text-sm">Abrir en Looker</span>
-        </button>
+        </a>
       </div>
       <p className="text-blue-100 text-lg">{dashboard.description}</p>
     </div>
@@ -43,18 +54,31 @@ const DashboardCard: React.FC<DashboardCardProps> = ({ dashboard }) => (
     {/* Embed */}
     <div className="p-6">
       <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-300 hover:border-gray-400 transition-colors text-center">
-        {dashboard.color === 'blue'
-          ? <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-          : <TrendingUp className="w-16 h-16 text-gray-400 mx-auto mb-4" />}
-        <p className="text-gray-500 text-lg font-medium mb-2">
-          Dashboard de {dashboard.type === 'production' ? 'Producción' : 'Crecimiento'}
-        </p>
-        <p className="text-gray-400 text-sm mb-4">Aquí se embedería el dashboard de Looker Studio</p>
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 max-w-sm mx-auto">
-          <p className="text-yellow-800 text-xs">
-            <strong>Nota:</strong> Reemplazar con el iframe del dashboard real de Looker Studio
-          </p>
-        </div>
+        {dashboard.id === 'production' ? (
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://lookerstudio.google.com/embed/reporting/6722b217-4379-4554-b08b-452cbdab5cba/page/p_qwyqx9h6ud"
+            frameBorder="0"
+            style={{ border: 0, minHeight: '22rem', borderRadius: '0.75rem' }}
+            allowFullScreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+            title="Dashboard Producción"
+          ></iframe>
+        ) : dashboard.id === 'growth' ? (
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://lookerstudio.google.com/embed/reporting/6722b217-4379-4554-b08b-452cbdab5cba/page/p_miqjfe46ud"
+            frameBorder="0"
+            style={{ border: 0, minHeight: '22rem', borderRadius: '0.75rem' }}
+            allowFullScreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+            title="Dashboard Crecimiento"
+          ></iframe>
+        ) : (
+          <p className="text-gray-400">No hay dashboard disponible</p>
+        )}
       </div>
     </div>
 
