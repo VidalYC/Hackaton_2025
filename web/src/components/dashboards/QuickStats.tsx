@@ -11,7 +11,7 @@ const QuickStats: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center">
           <Zap className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-          <div className="text-2xl font-bold text-blue-900 mb-1">223.039</div>
+          <div className="text-2xl font-bold text-blue-900 mb-1">2.632.431</div>
           <div className="text-blue-700 text-sm">MWh Producción Total</div>
         </div>
         <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-6 text-center">
@@ -21,12 +21,12 @@ const QuickStats: React.FC = () => (
         </div>
         <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
           <div className="text-2xl mb-3">☀️</div>
-          <div className="text-2xl font-bold text-green-900 mb-1">119 mil</div>
+          <div className="text-2xl font-bold text-green-900 mb-1">1.4 mill</div>
           <div className="text-green-700 text-sm">MWh Solar</div>
         </div>
         <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center">
           <div className="text-2xl mb-3">💨</div>
-          <div className="text-2xl font-bold text-purple-900 mb-1">104 mil</div>
+          <div className="text-2xl font-bold text-purple-900 mb-1">1.19 mill</div>
           <div className="text-purple-700 text-sm">MWh Eólica</div>
         </div>
       </div>

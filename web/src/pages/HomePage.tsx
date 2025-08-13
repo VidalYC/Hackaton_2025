@@ -24,7 +24,8 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <Hero />
+        <Hero onPageChange={onPageChange} />
+
       </motion.section>
 
       <div className="h-8 bg-gradient-to-b from-gray-50 to-white"></div>

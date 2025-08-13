@@ -1,17 +1,18 @@
 import React from 'react';
 import { ChevronRight, Zap, BarChart } from 'lucide-react';
 
-const Hero: React.FC = () => {
-  const scrollToDashboard = () => {
-    document.getElementById('dashboard')?.scrollIntoView({ behavior: 'smooth' });
-  };
+interface HeroProps {
+  onPageChange: (page: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onPageChange }) => {
 
   return (
     <section
       id="inicio"
       className="relative min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-white overflow-hidden"
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      style={{ ["--header-height" as any]: "80px" }}
+      style={{ ['--header-height' as any]: '80px' }}
     >
       {/* Fondo animado con blobs */}
       <div className="absolute inset-0">
@@ -47,7 +48,7 @@ const Hero: React.FC = () => {
             {/* Botones */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <button
-                onClick={scrollToDashboard}
+                onClick={() => onPageChange('dashboards')}
                 className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl flex items-center justify-center space-x-2"
               >
                 <BarChart className="h-5 w-5" />
@@ -56,12 +57,10 @@ const Hero: React.FC = () => {
               </button>
 
               <button
-                onClick={() =>
-                  document.getElementById('insights')?.scrollIntoView({ behavior: 'smooth' })
-                }
+                onClick={() => onPageChange('reports')}
                 className="border-2 border-cyan-500 text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                <span>Explorar Insights</span>
+                <span>Explorar Reportes</span>
               </button>
             </div>
 

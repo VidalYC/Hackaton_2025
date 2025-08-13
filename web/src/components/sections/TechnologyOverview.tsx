@@ -22,7 +22,7 @@ const TechnologyOverview: React.FC = () => {
             <p className="text-gray-600 mb-4">
               Monitoreo de plantas fotovoltaicas con análisis de irradiación y eficiencia
             </p>
-            <div className="text-3xl font-bold text-yellow-600">1.4m MWh</div>
+            <div className="text-3xl font-bold text-yellow-600">1.4 mill MWh</div>
             <p className="text-gray-500 text-sm">Producción acumulada</p>
           </div>
 
