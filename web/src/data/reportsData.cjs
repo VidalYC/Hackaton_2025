@@ -1,8 +1,10 @@
-import rawData from '../../../data/predictions/reporte_completo.json';
+// data/reportsData.js
+const path = require('path');
+const rawData = require(path.join(__dirname, '../../../data/predictions/reporte_completo.json'));
 
-const data = rawData as any;
+const data = rawData;
 
-export const reports = [
+exports.reports = [
   {
     id: 'monthly-production',
     title: 'Reporte Mensual de Producción',
@@ -19,7 +21,7 @@ export const reports = [
       `Crecimiento del ${data.insights_historicos.crecimiento_historico.tasa_crecimiento.toFixed(1)}%`,
       `${data.insights_historicos.tecnologia_dominante.lider} supera a ${data.insights_historicos.tecnologia_dominante.lider === 'Solar' ? 'Eólica' : 'Solar'}`
     ],
-    downloadUrl: '/pdfs/monthly-production.pdf'
+    downloadUrl: '/public/pdfs/reporte_mensual.pdf'
   },
   {
     id: 'growth-analysis',
@@ -37,7 +39,7 @@ export const reports = [
       `${data.insights_predicciones.nuevo_lider} en expansión`,
       `Proyección positiva ${new Date(data.fecha_analisis).getFullYear() + 1}`
     ],
-    downloadUrl: '/pdfs/growth-analysis.pdf'
+    downloadUrl: '/pdfs/reporte_crecimiento.pdf'
   },
   {
     id: 'regional-comparison',
@@ -55,7 +57,7 @@ export const reports = [
       `Eficiencia líder: ${Object.keys(data.insights_historicos.rankings_departamentos.ranking_eficiencia)[0]}`,
       'Potencial de mejora identificado'
     ],
-    downloadUrl: '/pdfs/regional-comparison.pdf'
+    downloadUrl: '/pdfs/reporte_regional.pdf'
   },
   {
     id: 'technology-performance',
@@ -73,7 +75,7 @@ export const reports = [
       `Eólica: ${Math.round(data.insights_historicos.analisis_tecnologias.Eólica.produccion_total / 1000)} mil MWh`,
       'Análisis de eficiencia'
     ],
-    downloadUrl: '/pdfs/technology-performance.pdf'
+    downloadUrl: '/pdfs/reporte_tecnologia.pdf'
   },
   {
     id: 'annual-summary',
@@ -91,7 +93,7 @@ export const reports = [
       'Logros del año',
       `Proyecciones ${new Date(data.fecha_analisis).getFullYear() + 1}`
     ],
-    downloadUrl: '/pdfs/annual-summary.pdf'
+    downloadUrl: '/pdfs/reporte_resumen.pdf'
   },
   {
     id: 'efficiency-metrics',
@@ -106,13 +108,13 @@ export const reports = [
     status: 'available',
     highlights: [
       `${Math.round(
-        (Object.values(data.insights_historicos.eficiencia_departamental) as any[])
-          .reduce((sum, dept: any) => sum + dept.produccion_promedio, 0) /
+        Object.values(data.insights_historicos.eficiencia_departamental)
+          .reduce((sum, dept) => sum + dept.produccion_promedio, 0) /
         Object.keys(data.insights_historicos.eficiencia_departamental).length
       )} MWh eficiencia promedio`,
       'KPIs operacionales',
       'Benchmarking'
     ],
-    downloadUrl: '/pdfs/efficiency-metrics.pdf'
+    downloadUrl: '/pdfs/reporte_eficiencia.pdf'
   }
 ];

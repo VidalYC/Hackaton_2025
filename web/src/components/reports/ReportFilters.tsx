@@ -39,20 +39,6 @@ const ReportFilters: React.FC<ReportFiltersProps> = ({
               })}
             </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <Calendar className="w-5 h-5 text-gray-500" />
-            <span className="text-gray-700 font-medium">Período:</span>
-            <select
-              value={selectedPeriod}
-              onChange={(e) => setSelectedPeriod(e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="all">Todos</option>
-              <option value="monthly">Mensual</option>
-              <option value="quarterly">Trimestral</option>
-              <option value="annual">Anual</option>
-            </select>
-          </div>
         </div>
       </div>
     </section>
