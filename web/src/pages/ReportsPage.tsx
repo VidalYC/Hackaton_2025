@@ -9,7 +9,7 @@ import SummaryStats from '../components/reports/SummaryStats';
 
 const ReportsPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
+  const [selectedPeriod, setSelectedPeriod] = useState('all');
 
   const filteredReports = reports.filter((r) =>
     (activeCategory === 'all' || r.category === activeCategory) &&

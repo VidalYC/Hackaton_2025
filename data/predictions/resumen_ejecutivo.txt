@@ -1,7 +1,11 @@
 RESUMEN EJECUTIVO - ANÁLISIS DE ENERGÍA RENOVABLE
 =======================================================
 
+<<<<<<< HEAD
 Fecha de análisis: 2025-08-13 01:19:34
+=======
+Fecha de análisis: 2025-08-12 23:53:40
+>>>>>>> 4b9101144a504d57bf4c27fc5ecab58a2d7ba987
 
 SITUACIÓN HISTÓRICA:
 --------------------
@@ -11,11 +15,19 @@ SITUACIÓN HISTÓRICA:
 PROYECCIONES FUTURAS:
 --------------------
 • Líder proyectado: La Guajira
+<<<<<<< HEAD
 • Cambio proyectado: -2.5%
+=======
+• Cambio proyectado: -1.9%
+>>>>>>> 4b9101144a504d57bf4c27fc5ecab58a2d7ba987
 
 RECOMENDACIONES:
 ---------------
 1. Mantener inversión en La Guajira que conserva el liderazgo
+<<<<<<< HEAD
 2. Priorizar desarrollo de tecnología Eólica
+=======
+2. Priorizar desarrollo de tecnología Solar
+>>>>>>> 4b9101144a504d57bf4c27fc5ecab58a2d7ba987
 3. Mantener estrategia actual con crecimiento estable
 4. Implementar sistema de monitoreo predictivo continuo

@@ -1,5 +1,5 @@
 // utils/processReports.ts
-import rawData from '../data/reporte_completo.json';
+import rawData from '../../../data/predictions/reporte_completo.json';
 
 export function processReports() {
   const data = rawData as any;
