@@ -2,7 +2,7 @@ import os
 import traceback  # Para mostrar tracebacks
 from data_processing.import_export_Data.data_loader import DataLoader
 from data_processing.eda.eda import EnergyEDA
-from data_processing.eda.insights import InsightsGenerator
+from data_processing.insights.insights import InsightsGenerator
 from data_processing.import_export_Data.exporter import DataExporter
 from machine_learning.predictor.energy_predictor import EnergyPredictor
 from machine_learning.predictor_insights.prediction_insights import (
