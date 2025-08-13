@@ -1,7 +1,7 @@
 RESUMEN EJECUTIVO - ANÁLISIS DE ENERGÍA RENOVABLE
 =======================================================
 
-Fecha de análisis: 2025-08-12 19:47:15
+Fecha de análisis: 2025-08-13 01:19:34
 
 SITUACIÓN HISTÓRICA:
 --------------------
@@ -10,12 +10,12 @@ SITUACIÓN HISTÓRICA:
 
 PROYECCIONES FUTURAS:
 --------------------
-• Líder proyectado: Atlántico
-• Cambio proyectado: -2.7%
+• Líder proyectado: La Guajira
+• Cambio proyectado: -2.5%
 
 RECOMENDACIONES:
 ---------------
-1. Considerar incrementar inversión en Atlántico como nuevo líder emergente
+1. Mantener inversión en La Guajira que conserva el liderazgo
 2. Priorizar desarrollo de tecnología Eólica
 3. Mantener estrategia actual con crecimiento estable
 4. Implementar sistema de monitoreo predictivo continuo
