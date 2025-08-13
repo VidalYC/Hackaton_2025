@@ -1,5 +1,5 @@
 {
-  "fecha_analisis": "2025-08-12 23:53:40",
+  "fecha_analisis": "2025-08-13 01:19:34",
   "insights_historicos": {
     "informacion_basica": {
       "filas_total": 2050,
@@ -50,17 +50,470 @@
     },
     "estacionalidad": {
       "mejor_mes": 1,
-      "peor_mes": 4
+      "mejor_mes_produccion": 239770.0,
+      "peor_mes": 4,
+      "peor_mes_produccion": 174476.0,
+      "diferencia_absoluta": 65294.0,
+      "diferencia_relativa": 37.42291203374677,
+      "variabilidad_mensual": 0.09612319176243535,
+      "meses_pico": [
+        1,
+        3,
+        7
+      ],
+      "meses_valle": [
+        4,
+        11,
+        10
+      ]
+    },
+    "analisis_temporal": {
+      "patrones_mensuales": {
+        "1": {
+          "promedio": 1217.1065989847716,
+          "desviacion": 581.5183274061897,
+          "minimo": 100.0,
+          "maximo": 3039.0,
+          "registros": 197
+        },
+        "2": {
+          "promedio": 1328.5977011494253,
+          "desviacion": 618.8283159479388,
+          "minimo": 100.0,
+          "maximo": 2847.0,
+          "registros": 174
+        },
+        "3": {
+          "promedio": 1320.7734806629835,
+          "desviacion": 603.3460574749748,
+          "minimo": 100.0,
+          "maximo": 2738.0,
+          "registros": 181
+        },
+        "4": {
+          "promedio": 1163.1733333333334,
+          "desviacion": 541.9839610627023,
+          "minimo": 100.0,
+          "maximo": 2996.0,
+          "registros": 150
+        },
+        "5": {
+          "promedio": 1232.3155080213903,
+          "desviacion": 575.3428635797846,
+          "minimo": 100.0,
+          "maximo": 3159.0,
+          "registros": 187
+        },
+        "6": {
+          "promedio": 1315.029761904762,
+          "desviacion": 663.9821838169232,
+          "minimo": 100.0,
+          "maximo": 3313.0,
+          "registros": 168
+        },
+        "7": {
+          "promedio": 1352.3815028901734,
+          "desviacion": 614.8938782556978,
+          "minimo": 100.0,
+          "maximo": 2893.0,
+          "registros": 173
+        },
+        "8": {
+          "promedio": 1413.3067484662577,
+          "desviacion": 674.7436672067834,
+          "minimo": 100.0,
+          "maximo": 3866.0,
+          "registros": 163
+        },
+        "9": {
+          "promedio": 1305.877192982456,
+          "desviacion": 665.6724438316344,
+          "minimo": 100.0,
+          "maximo": 3264.0,
+          "registros": 171
+        },
+        "10": {
+          "promedio": 1260.43949044586,
+          "desviacion": 523.989752512585,
+          "minimo": 100.0,
+          "maximo": 2675.0,
+          "registros": 157
+        },
+        "11": {
+          "promedio": 1182.4968553459119,
+          "desviacion": 526.0519283484878,
+          "minimo": 100.0,
+          "maximo": 2700.0,
+          "registros": 159
+        },
+        "12": {
+          "promedio": 1311.9941176470588,
+          "desviacion": 572.6565675375524,
+          "minimo": 100.0,
+          "maximo": 2818.0,
+          "registros": 170
+        }
+      },
+      "patrones_trimestrales": {
+        "1": {
+          "total": 710006.0,
+          "promedio": 1286.2427536231885,
+          "registros": 552
+        },
+        "2": {
+          "total": 625844.0,
+          "promedio": 1239.2950495049504,
+          "registros": 505
+        },
+        "3": {
+          "total": 687636.0,
+          "promedio": 1356.284023668639,
+          "registros": 507
+        },
+        "4": {
+          "total": 608945.0,
+          "promedio": 1252.9732510288065,
+          "registros": 486
+        }
+      },
+      "patrones_anuales": {
+        "2024": {
+          "total": 2632431.0,
+          "promedio": 1284.1126829268292,
+          "registros": 2050
+        }
+      },
+      "patrones_semanales": {
+        "Lunes": 1212.8317757009345,
+        "Martes": 1288.5575539568345,
+        "Miércoles": 1269.6283783783783,
+        "Jueves": 1309.8933823529412,
+        "Viernes": 1293.9074733096086,
+        "Sábado": 1335.7986348122868,
+        "Domingo": 1287.4271844660195
+      },
+      "tendencias_temporales": {
+        "trend_direction": "estable",
+        "trend_magnitude": 0.0
+      },
+      "estacionalidad_detallada": {
+        "indices_estacionales": {
+          "1": 1.0929973093311847,
+          "2": 1.053821353722092,
+          "3": 1.0897607572620136,
+          "4": 0.795353040592517,
+          "5": 1.0504799555999758,
+          "6": 1.0070919237769196,
+          "7": 1.0665214017005573,
+          "8": 1.0501426248209356,
+          "9": 1.0179412109947041,
+          "10": 0.9020817639664629,
+          "11": 0.8570800146328622,
+          "12": 1.0167286435997753
+        },
+        "amplitud_estacional": 0.29764426873866767,
+        "meses_alta_temporada": [
+          1,
+          3,
+          7,
+          2
+        ],
+        "meses_baja_temporada": [
+          4,
+          11,
+          10,
+          6
+        ]
+      },
+      "ciclicidad": {
+        "ciclos_detectados": "análisis_básico",
+        "periodicidad_principal": "mensual",
+        "intensidad_ciclica": "media"
+      },
+      "volatilidad_temporal": {
+        "volatilidad_por_mes": {
+          "1": 581.5183274061897,
+          "2": 618.8283159479388,
+          "3": 603.3460574749748,
+          "4": 541.9839610627023,
+          "5": 575.3428635797846,
+          "6": 663.9821838169232,
+          "7": 614.8938782556978,
+          "8": 674.7436672067834,
+          "9": 665.6724438316344,
+          "10": 523.989752512585,
+          "11": 526.0519283484878,
+          "12": 572.6565675375524
+        },
+        "volatilidad_promedio": 596.9174955817713,
+        "mes_mas_volatil": 8,
+        "mes_mas_estable": 10
+      }
     },
     "departamento_lider": {
       "nombre": "La Guajira",
       "produccion_total": 696794.0,
-      "porcentaje": 26.46960167237052
+      "porcentaje": 26.46960167237052,
+      "superioridad": 1.0310638782718582
+    },
+    "analisis_departamentos": {
+      "Atlántico": {
+        "produccion_total": 675801.0,
+        "produccion_promedio": 1359.7605633802816,
+        "produccion_mediana": 1337.0,
+        "desviacion_estandar": 564.3910980039759,
+        "coeficiente_variacion": 0.4150665295079114,
+        "min_produccion": 100.0,
+        "max_produccion": 3866.0,
+        "rango_produccion": 3766.0,
+        "num_registros": 497,
+        "porcentaje_total": 25.67212587908287,
+        "percentil_25": 1014.0,
+        "percentil_75": 1715.0,
+        "iqr": 701.0,
+        "outliers": 7,
+        "tendencia_mensual": {
+          "1": 1252.2380952380952,
+          "2": 1467.047619047619,
+          "3": 1345.5686274509803,
+          "4": 1315.0,
+          "5": 1257.9259259259259,
+          "6": 1389.590909090909,
+          "7": 1429.7555555555555,
+          "8": 1549.5333333333333,
+          "9": 1339.2941176470588,
+          "10": 1396.75,
+          "11": 1186.047619047619,
+          "12": 1455.5454545454545
+        },
+        "estacionalidad": 0.4099242819430736,
+        "volatilidad": 0.4150665295079114
+      },
+      "Cesar": {
+        "produccion_total": 584989.0,
+        "produccion_promedio": 1147.0372549019608,
+        "produccion_mediana": 1131.0,
+        "desviacion_estandar": 662.3338807072493,
+        "coeficiente_variacion": 0.5774301382772961,
+        "min_produccion": 100.0,
+        "max_produccion": 3159.0,
+        "rango_produccion": 3059.0,
+        "num_registros": 510,
+        "porcentaje_total": 22.22238683559037,
+        "percentil_25": 634.5,
+        "percentil_75": 1590.75,
+        "iqr": 956.25,
+        "outliers": 3,
+        "tendencia_mensual": {
+          "1": 1022.2708333333334,
+          "2": 1211.0566037735848,
+          "3": 1228.6279069767443,
+          "4": 1016.0882352941177,
+          "5": 1078.906976744186,
+          "6": 1119.5333333333333,
+          "7": 1208.6315789473683,
+          "8": 1248.7222222222222,
+          "9": 1280.560975609756,
+          "10": 1228.1063829787233,
+          "11": 1028.6304347826087,
+          "12": 1087.8055555555557
+        },
+        "estacionalidad": 0.579241113547603,
+        "volatilidad": 0.5774301382772961
+      },
+      "La Guajira": {
+        "produccion_total": 696794.0,
+        "produccion_promedio": 1377.0632411067193,
+        "produccion_mediana": 1385.0,
+        "desviacion_estandar": 639.2661014537609,
+        "coeficiente_variacion": 0.4642242145248137,
+        "min_produccion": 100.0,
+        "max_produccion": 3313.0,
+        "rango_produccion": 3213.0,
+        "num_registros": 506,
+        "porcentaje_total": 26.46960167237052,
+        "percentil_25": 933.5,
+        "percentil_75": 1796.25,
+        "iqr": 862.75,
+        "outliers": 4,
+        "tendencia_mensual": {
+          "1": 1372.3846153846155,
+          "2": 1449.2,
+          "3": 1599.2432432432433,
+          "4": 1174.8,
+          "5": 1345.44,
+          "6": 1468.8,
+          "7": 1483.4705882352941,
+          "8": 1422.3478260869565,
+          "9": 1343.7142857142858,
+          "10": 1255.725,
+          "11": 1319.1333333333334,
+          "12": 1368.8157894736842
+        },
+        "estacionalidad": 0.45582894660234496,
+        "volatilidad": 0.4642242145248137
+      },
+      "Magdalena": {
+        "produccion_total": 674847.0,
+        "produccion_promedio": 1256.6983240223465,
+        "produccion_mediana": 1218.0,
+        "desviacion_estandar": 507.49857203036294,
+        "coeficiente_variacion": 0.40383484431331085,
+        "min_produccion": 100.0,
+        "max_produccion": 2636.0,
+        "rango_produccion": 2536.0,
+        "num_registros": 537,
+        "porcentaje_total": 25.635885612956237,
+        "percentil_25": 876.0,
+        "percentil_75": 1594.0,
+        "iqr": 718.0,
+        "outliers": 0,
+        "tendencia_mensual": {
+          "1": 1213.509090909091,
+          "2": 1215.5384615384614,
+          "3": 1168.66,
+          "4": 1145.2727272727273,
+          "5": 1221.25,
+          "6": 1298.7692307692307,
+          "7": 1308.1607142857142,
+          "8": 1441.1960784313726,
+          "9": 1264.340425531915,
+          "10": 1166.3529411764705,
+          "11": 1251.5121951219512,
+          "12": 1304.2115384615386
+        },
+        "estacionalidad": 0.39691436894435267,
+        "volatilidad": 0.40383484431331085
+      }
+    },
+    "rankings_departamentos": {
+      "ranking_produccion": {
+        "La Guajira": "696794",
+        "Atlántico": "675801",
+        "Magdalena": "674847",
+        "Cesar": "584989"
+      },
+      "ranking_eficiencia": {
+        "La Guajira": 1377.06,
+        "Atlántico": 1359.76,
+        "Magdalena": 1256.7,
+        "Cesar": 1147.04
+      },
+      "ranking_consistencia": {
+        "Magdalena": 2.476256157635468,
+        "Atlántico": 2.4092560109144388,
+        "La Guajira": 2.154113285466235,
+        "Cesar": 1.7318255250403876
+      },
+      "concentracion_mercado": {
+        "hhi_index": 0.2510730967676633,
+        "market_concentration": "Alto"
+      }
     },
     "tecnologia_dominante": {
       "lider": "Solar",
       "produccion_total": 1439113.0,
-      "participacion": 54.66859340282804
+      "participacion": 54.66859340282804,
+      "ventaja_competitiva": 54.66859340282804
+    },
+    "analisis_tecnologias": {
+      "Solar": {
+        "produccion_total": 1439113.0,
+        "produccion_promedio": 1364.0881516587679,
+        "participacion_mercado": 54.66859340282804,
+        "num_instalaciones": 1055,
+        "eficiencia_promedio": 1364.0881516587679,
+        "variabilidad": 0.47829058382878115,
+        "capacidad_maxima": 3866.0,
+        "factor_utilizacion": 0.35284225340371644,
+        "crecimiento_temporal": {
+          "growth_rate": 0.0,
+          "trend": "insufficient_data"
+        },
+        "distribucion_geografica": {
+          "top_departments": {
+            "Magdalena": 425483,
+            "La Guajira": 384446,
+            "Atlántico": 338621,
+            "Cesar": 290563
+          },
+          "geographic_concentration": 0.7980957714925792,
+          "presence_coverage": 4
+        },
+        "rendimiento_por_mes": {
+          "1": 1170.212765957447,
+          "2": 1284.4,
+          "3": 1372.2555555555555,
+          "4": 1233.904761904762,
+          "5": 1256.6060606060605,
+          "6": 1494.5222222222221,
+          "7": 1654.0533333333333,
+          "8": 1571.9,
+          "9": 1487.344827586207,
+          "10": 1311.5925925925926,
+          "11": 1241.493670886076,
+          "12": 1306.7802197802198
+        },
+        "correlacion_climatica": {
+          "seasonal_correlation": "positiva",
+          "summer_winter_ratio": 1.254980687594864
+        }
+      },
+      "Eólica": {
+        "produccion_total": 1193318.0,
+        "produccion_promedio": 1199.3145728643217,
+        "participacion_mercado": 45.33140659717197,
+        "num_instalaciones": 995,
+        "eficiencia_promedio": 1199.3145728643217,
+        "variabilidad": 0.44282226188082185,
+        "capacidad_maxima": 3107.0,
+        "factor_utilizacion": 0.38600404662514376,
+        "crecimiento_temporal": {
+          "growth_rate": 0.0,
+          "trend": "insufficient_data"
+        },
+        "distribucion_geografica": {
+          "top_departments": {
+            "Atlántico": 337180,
+            "La Guajira": 312348,
+            "Cesar": 294426,
+            "Magdalena": 249364
+          },
+          "geographic_concentration": 0.7910330691399945,
+          "presence_coverage": 4
+        },
+        "rendimiento_por_mes": {
+          "1": 1259.9029126213593,
+          "2": 1370.808988764045,
+          "3": 1269.857142857143,
+          "4": 1073.1515151515152,
+          "5": 1204.9886363636363,
+          "6": 1107.923076923077,
+          "7": 1121.5102040816328,
+          "8": 1161.5714285714287,
+          "9": 1117.9285714285713,
+          "10": 1205.921052631579,
+          "11": 1124.2375,
+          "12": 1318.0
+        },
+        "correlacion_climatica": {
+          "seasonal_correlation": "variable",
+          "summer_winter_ratio": 1.0
+        }
+      }
+    },
+    "comparativa_tecnologica": {
+      "dominancia_solar": 1439113.0,
+      "dominancia_eolica": 1193318.0,
+      "ratio_solar_eolica": 1.2059761103075626,
+      "complementariedad": {
+        "correlation": -0.38021714347868063,
+        "complementarity": "media"
+      },
+      "diversificacion_indice": {
+        "diversification_score": 0.9937019016183669,
+        "level": "Alto"
+      }
     },
     "analisis_cruzado": {
       "matriz_cruzada": {
@@ -76,7 +529,56 @@
           "La Guajira": 384446,
           "Magdalena": 425483
         }
-      }
+      },
+      "diversificacion_por_depto": {
+        "Atlántico": {
+          "score": 0.9999967202920401,
+          "tecnologias_activas": 2,
+          "tecnologia_dominante": "Solar",
+          "concentracion": 0.5010661422519351
+        },
+        "Cesar": {
+          "score": 0.9999685441289059,
+          "tecnologias_activas": 2,
+          "tecnologia_dominante": "Eólica",
+          "concentracion": 0.5033017714863014
+        },
+        "La Guajira": {
+          "score": 0.9922632286926959,
+          "tecnologias_activas": 2,
+          "tecnologia_dominante": "Solar",
+          "concentracion": 0.5517355201106784
+        },
+        "Magdalena": {
+          "score": 0.9502965823735107,
+          "tecnologias_activas": 2,
+          "tecnologia_dominante": "Solar",
+          "concentracion": 0.6304880958202378
+        }
+      },
+      "especializacion_tecnologica": {
+        "Solar": {
+          "departamento_lider": "Magdalena",
+          "concentracion": 0.29565642169864353,
+          "presencia_geografica": 4,
+          "distribucion_equilibrio": 0.9595539014045755
+        },
+        "Eólica": {
+          "departamento_lider": "Atlántico",
+          "concentracion": 0.2825567032425556,
+          "presencia_geografica": 4,
+          "distribucion_equilibrio": 0.9689497413700272
+        }
+      },
+      "concentracion_geografica": {
+        "top3_concentration": 0.7777761316440963,
+        "top5_concentration": 1.0,
+        "gini_coefficient": 0.03194471194116755,
+        "departamentos_significativos": 4
+      },
+      "sinergias_potenciales": [],
+      "gaps_de_mercado": [],
+      "oportunidades_expansion": []
     },
     "eficiencia_departamental": {
       "Atlántico": {
@@ -131,15 +633,25 @@
         "fuerza": "moderada"
       }
     },
+    "complementariedad": {
+      "score": 0.47091639829945353,
+      "nivel": "media",
+      "tecnologias": [
+        "Eólica",
+        "Solar"
+      ]
+    },
     "liderazgo": {
       "nombre": "La Guajira",
       "produccion_total": 696794.0,
-      "porcentaje": 26.46960167237052
+      "porcentaje": 26.46960167237052,
+      "superioridad": 1.0310638782718582
     },
     "tecnologia": {
       "lider": "Solar",
       "produccion_total": 1439113.0,
-      "participacion": 54.66859340282804
+      "participacion": 54.66859340282804,
+      "ventaja_competitiva": 54.66859340282804
     },
     "eficiencia": {
       "Atlántico": {
@@ -189,19 +701,18 @@
         "tipo": "negativa",
         "fuerza": "moderada"
       }
-    },
-    "complementariedad": {}
+    }
   },
   "insights_predicciones": {
-    "cambio_promedio_ml": -1.8970820634227856,
+    "cambio_promedio_ml": -2.5253795496716775,
     "cambio_promedio_prophet": 6.011774843227527,
     "liderazgo_consistente": true,
     "nuevo_lider": "La Guajira",
-    "tecnologia_lider_futuro": "Solar",
-    "tecnologia_consistente": true,
+    "tecnologia_lider_futuro": "Eólica",
+    "tecnologia_consistente": false,
     "recomendaciones": [
       "Mantener inversión en La Guajira que conserva el liderazgo",
-      "Priorizar desarrollo de tecnología Solar",
+      "Priorizar desarrollo de tecnología Eólica",
       "Mantener estrategia actual con crecimiento estable",
       "Implementar sistema de monitoreo predictivo continuo"
     ]
@@ -216,7 +727,7 @@
   },
   "recomendaciones": [
     "Mantener inversión en La Guajira que conserva el liderazgo",
-    "Priorizar desarrollo de tecnología Solar",
+    "Priorizar desarrollo de tecnología Eólica",
     "Mantener estrategia actual con crecimiento estable",
     "Implementar sistema de monitoreo predictivo continuo"
   ]
