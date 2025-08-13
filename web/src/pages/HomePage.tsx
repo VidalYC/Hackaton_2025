@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Hero, StatsSection, FeaturesSection, TechnologyOverview, CTASection } from '../components';
+import { Hero, StatsSection, FeaturesSection, TechnologyOverview, CTASection } from '../components/sections/Index';
 
 interface HomePageProps {
   onPageChange: (page: string) => void;

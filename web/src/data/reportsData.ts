@@ -1,0 +1,80 @@
+export const reports = [
+  {
+    id: 'monthly-production',
+    title: 'Reporte Mensual de Producción',
+    description: 'Análisis completo de la producción energética mensual por departamento y tecnología',
+    category: 'production',
+    period: 'monthly',
+    date: '2024-12-01',
+    size: '2.4 MB',
+    pages: 24,
+    type: 'PDF',
+    status: 'available',
+    highlights: ['Magdalena líder con 49 mil MWh', 'Crecimiento del 15.6%', 'Solar supera a eólica']
+  },
+  {
+    id: 'growth-analysis',
+    title: 'Análisis de Crecimiento Trimestral',
+    description: 'Evaluación detallada de las tendencias de crecimiento y proyecciones futuras',
+    category: 'growth',
+    period: 'quarterly',
+    date: '2024-10-01',
+    size: '3.1 MB',
+    pages: 32,
+    type: 'PDF',
+    status: 'available',
+    highlights: ['Crecimiento del 37.3%', 'Atlántico en expansión', 'Proyección positiva 2025']
+  },
+  {
+    id: 'regional-comparison',
+    title: 'Comparativa Regional del Caribe',
+    description: 'Análisis comparativo del rendimiento energético entre departamentos del Caribe',
+    category: 'regional',
+    period: 'quarterly',
+    date: '2024-09-15',
+    size: '4.2 MB',
+    pages: 45,
+    type: 'PDF',
+    status: 'available',
+    highlights: ['5 departamentos analizados', 'Eficiencia por región', 'Potencial de mejora']
+  },
+  {
+    id: 'technology-performance',
+    title: 'Rendimiento por Tecnología',
+    description: 'Evaluación del desempeño de tecnologías solar y eólica con métricas de eficiencia',
+    category: 'technology',
+    period: 'monthly',
+    date: '2024-11-30',
+    size: '1.8 MB',
+    pages: 18,
+    type: 'PDF',
+    status: 'available',
+    highlights: ['Solar: 119 mil MWh', 'Eólica: 104 mil MWh', 'Análisis de eficiencia']
+  },
+  {
+    id: 'annual-summary',
+    title: 'Resumen Anual 2024',
+    description: 'Informe ejecutivo con los principales logros y métricas del año 2024',
+    category: 'summary',
+    period: 'annual',
+    date: '2024-12-31',
+    size: '5.6 MB',
+    pages: 68,
+    type: 'PDF',
+    status: 'processing',
+    highlights: ['Resumen ejecutivo', 'Logros del año', 'Proyecciones 2025']
+  },
+  {
+    id: 'efficiency-metrics',
+    title: 'Métricas de Eficiencia Operacional',
+    description: 'Análisis detallado de KPIs operacionales y métricas de rendimiento',
+    category: 'metrics',
+    period: 'monthly',
+    date: '2024-12-01',
+    size: '2.1 MB',
+    pages: 22,
+    type: 'PDF',
+    status: 'available',
+    highlights: ['85% eficiencia promedio', 'KPIs operacionales', 'Benchmarking']
+  }
+];
