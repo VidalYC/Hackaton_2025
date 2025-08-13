@@ -10,6 +10,7 @@ const Hero: React.FC = () => {
     <section
       id="inicio"
       className="relative min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-white overflow-hidden"
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       style={{ ["--header-height" as any]: "80px" }}
     >
       {/* Fondo animado con blobs */}
@@ -75,7 +76,7 @@ const Hero: React.FC = () => {
                 <div className="text-sm text-gray-600">Precisión</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">5</div>
+                <div className="text-3xl font-bold text-green-600">4</div>
                 <div className="text-sm text-gray-600">Departamentos</div>
               </div>
             </div>

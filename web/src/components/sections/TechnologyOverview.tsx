@@ -22,7 +22,7 @@ const TechnologyOverview: React.FC = () => {
             <p className="text-gray-600 mb-4">
               Monitoreo de plantas fotovoltaicas con análisis de irradiación y eficiencia
             </p>
-            <div className="text-3xl font-bold text-yellow-600">119 mil MWh</div>
+            <div className="text-3xl font-bold text-yellow-600">1.4m MWh</div>
             <p className="text-gray-500 text-sm">Producción acumulada</p>
           </div>
 
@@ -35,7 +35,7 @@ const TechnologyOverview: React.FC = () => {
             <p className="text-gray-600 mb-4">
               Seguimiento de parques eólicos con datos de velocidad del viento y generación
             </p>
-            <div className="text-3xl font-bold text-blue-600">104 mil MWh</div>
+            <div className="text-3xl font-bold text-blue-600">1.19 mill MWh</div>
             <p className="text-gray-500 text-sm">Producción acumulada</p>
           </div>
         </div>

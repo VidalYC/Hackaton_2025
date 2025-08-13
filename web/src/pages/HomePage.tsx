@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Hero, StatsSection, FeaturesSection, TechnologyOverview, CTASection } from '../components/sections/Index';
+import { Hero, StatsSection, FeaturesSection, TechnologyOverview, CTASection, TechMarqueeDouble } from '../components/sections/Index';
+
 
 interface HomePageProps {
   onPageChange: (page: string) => void;
@@ -56,7 +57,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
         <FeaturesSection onPageChange={onPageChange} />
       </motion.section>
 
-      <div className="h-8 bg-gradient-to-b from-gray-50 to-white"></div>
+
 
       {/* Technology */}
       <motion.section
@@ -69,6 +70,11 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
         viewport={{ once: true }}
       >
         <TechnologyOverview />
+
+        {/* Aquí mostramos la barra de herramientas */}
+        <div className="mt-8">
+          <TechMarqueeDouble />
+        </div>
       </motion.section>
 
       <div className="h-8 bg-gradient-to-b from-white to-gray-50"></div>
@@ -77,7 +83,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
       <motion.section
         id="cta"
         className="scroll-mt-20"
-        variants={fadeInUp} // igual que Hero
+        variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 0.8 }}

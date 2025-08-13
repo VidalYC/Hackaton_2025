@@ -3,9 +3,9 @@ import { Zap, TrendingUp, MapPin, Activity } from 'lucide-react';
 
 const StatsSection: React.FC = () => {
   const stats = [
-    { icon: <Zap className="w-8 h-8 text-white" />, bg: "bg-blue-600", value: "223.039", label: "MWh Producción Total", change: "↑ 15.6%", changeColor: "text-green-600", cardBg: "from-blue-50 to-blue-100" },
+    { icon: <Zap className="w-8 h-8 text-white" />, bg: "bg-blue-600", value: "2.632.431", label: "MWh Producción Total",  changeColor: "text-green-600", cardBg: "from-blue-50 to-blue-100" },
     { icon: <TrendingUp className="w-8 h-8 text-white" />, bg: "bg-teal-600", value: "396.775", label: "MWh Crecimiento Total", change: "↑ 37.3%", changeColor: "text-green-600", cardBg: "from-teal-50 to-teal-100" },
-    { icon: <MapPin className="w-8 h-8 text-white" />, bg: "bg-green-600", value: "5", label: "Departamentos", change: "Caribe colombiano", changeColor: "text-gray-500", cardBg: "from-green-50 to-green-100" },
+    { icon: <MapPin className="w-8 h-8 text-white" />, bg: "bg-green-600", value: "4", label: "Departamentos", change: "Caribe colombiano", changeColor: "text-gray-500", cardBg: "from-green-50 to-green-100" },
     { icon: <Activity className="w-8 h-8 text-white" />, bg: "bg-orange-600", value: "2", label: "Tecnologías", change: "Solar y Eólica", changeColor: "text-gray-500", cardBg: "from-orange-50 to-orange-100" }
   ];
 
