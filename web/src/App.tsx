@@ -25,14 +25,14 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Navigation currentPage={currentPage} onPageChange={setCurrentPage} />
       {renderPage()}
-      
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-2 rounded-lg">
+                <div className="bg-gradient-to-r from-blue-400 to-teal-600 p-2 rounded-lg">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xl font-bold">EnergyAnalytics</span>

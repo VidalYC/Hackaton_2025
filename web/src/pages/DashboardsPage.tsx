@@ -168,25 +168,25 @@ const DashboardsPage: React.FC = () => {
                   <div className="grid grid-cols-2 gap-3">
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <div className={`w-2 h-2 rounded-full ${
-                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-teal-500'
+                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-indigo-500'
                       }`}></div>
                       <span>Filtros interactivos</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <div className={`w-2 h-2 rounded-full ${
-                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-teal-500'
+                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-indigo-500'
                       }`}></div>
                       <span>Datos en tiempo real</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <div className={`w-2 h-2 rounded-full ${
-                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-teal-500'
+                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-indigo-500'
                       }`}></div>
                       <span>Exportación de datos</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <div className={`w-2 h-2 rounded-full ${
-                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-teal-500'
+                        dashboard.color === 'blue' ? 'bg-blue-500' : 'bg-indigo-500'
                       }`}></div>
                       <span>Visualizaciones múltiples</span>
                     </div>
