@@ -1,5 +1,5 @@
 {
-  "fecha_analisis": "2025-08-13 01:19:34",
+  "fecha_analisis": "2025-08-13 01:40:34",
   "insights_historicos": {
     "informacion_basica": {
       "filas_total": 2050,
@@ -704,14 +704,14 @@
     }
   },
   "insights_predicciones": {
-    "cambio_promedio_ml": -2.5253795496716775,
+    "cambio_promedio_ml": -2.1826305580538454,
     "cambio_promedio_prophet": 6.011774843227527,
-    "liderazgo_consistente": true,
-    "nuevo_lider": "La Guajira",
+    "liderazgo_consistente": false,
+    "nuevo_lider": "Atlántico",
     "tecnologia_lider_futuro": "Eólica",
     "tecnologia_consistente": false,
     "recomendaciones": [
-      "Mantener inversión en La Guajira que conserva el liderazgo",
+      "Considerar incrementar inversión en Atlántico como nuevo líder emergente",
       "Priorizar desarrollo de tecnología Eólica",
       "Mantener estrategia actual con crecimiento estable",
       "Implementar sistema de monitoreo predictivo continuo"
@@ -726,7 +726,7 @@
     }
   },
   "recomendaciones": [
-    "Mantener inversión en La Guajira que conserva el liderazgo",
+    "Considerar incrementar inversión en Atlántico como nuevo líder emergente",
     "Priorizar desarrollo de tecnología Eólica",
     "Mantener estrategia actual con crecimiento estable",
     "Implementar sistema de monitoreo predictivo continuo"
