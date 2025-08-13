@@ -1,21 +1,21 @@
 RESUMEN EJECUTIVO - ANÁLISIS DE ENERGÍA RENOVABLE
 =======================================================
 
-Fecha de análisis: 2025-08-11 19:27:37
+Fecha de análisis: 2025-08-12 19:47:15
 
 SITUACIÓN HISTÓRICA:
 --------------------
-• Departamento líder: Atlántico (25.7%)
+• Departamento líder: La Guajira (26.46960167237052%)
 • Tecnología dominante: Solar
 
 PROYECCIONES FUTURAS:
 --------------------
 • Líder proyectado: Atlántico
-• Cambio proyectado: -1.3%
+• Cambio proyectado: -2.7%
 
 RECOMENDACIONES:
 ---------------
-1. Mantener inversión en Atlántico que conserva el liderazgo
+1. Considerar incrementar inversión en Atlántico como nuevo líder emergente
 2. Priorizar desarrollo de tecnología Eólica
 3. Mantener estrategia actual con crecimiento estable
 4. Implementar sistema de monitoreo predictivo continuo

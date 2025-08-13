@@ -46,14 +46,19 @@ def main():
     # EDA existente
     eda = EnergyEDA(loader.df)
     eda.basic_info()
+    eda.analyze_temporal_patterns()  # Crea mes, trimestre, etc.
     eda.analyze_departments()
     eda.analyze_technologies()
-    eda.analyze_temporal_patterns()
     eda.cross_analysis()
+
 
     # insights existentes
     insights_gen = InsightsGenerator(loader.df, eda.insights)
     insights_gen.generate_summary()
+    
+    # Generar insights comprehensive para el reporte
+    comprehensive_insights = insights_gen.get_comprehensive_insights()
+    eda.insights.update(comprehensive_insights)
 
     # ========================================
     # FASE 2: PREDICCIONES AVANZADAS
@@ -85,7 +90,9 @@ def main():
 
         # Crear generador de insights comparativos
         comparative_insights = PredictionInsightsGenerator(
-            loader.df, predictor, eda.insights
+            loader.df, 
+            predictor, 
+            eda.insights  # Ahora contiene los insights comprehensive
         )
 
         # Ejecutar análisis comparativo
