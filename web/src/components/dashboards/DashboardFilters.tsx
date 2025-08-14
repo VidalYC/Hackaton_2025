@@ -42,7 +42,7 @@ const DashboardFilters: React.FC<DashboardFiltersProps> = ({ activeFilter, setAc
         </div>
         <div className="flex items-center space-x-1">
           <MapPin className="w-4 h-4" />
-          <span>5 Departamentos</span>
+          <span>4 Departamentos</span>
         </div>
       </div>
     </div>
