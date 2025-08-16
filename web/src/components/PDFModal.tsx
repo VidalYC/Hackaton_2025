@@ -34,6 +34,37 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
     }
   }, [isOpen]);
 
+  // Función para manejar el scroll con teclado
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!isOpen) return;
+
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault();
+          goToPrevPage();
+          break;
+        case 'ArrowRight':
+          event.preventDefault();
+          goToNextPage();
+          break;
+        case 'ArrowUp':
+        case 'ArrowDown':
+          // Permitir scroll vertical natural
+          break;
+        case 'Escape':
+          event.preventDefault();
+          onClose();
+          break;
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [isOpen, pageNumber, numPages]);
+
   const goToPrevPage = () => {
     setPageNumber(prev => Math.max(prev - 1, 1));
   };
@@ -50,9 +81,7 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
     setScale(prev => Math.max(prev - 0.2, 0.5));
   };
 
-  const resetZoom = () => {
-    setScale(1.2);
-  };
+
 
   return (
     <Modal
@@ -80,11 +109,13 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
           backgroundColor: '#f8f9fa',
           inset: 'auto',
           overflow: 'hidden',
+          display: 'flex',
+          flexDirection: 'column',
         },
       }}
     >
       {/* Header con controles */}
-      <div className="flex justify-between items-center bg-white shadow-sm px-6 py-4 border-b">
+      <div className="flex justify-between items-center bg-white shadow-sm px-6 py-4 border-b flex-shrink-0">
         <div className="flex items-center space-x-4">
           <h2 className="text-lg font-semibold text-gray-800">Vista previa PDF</h2>
           {numPages > 0 && (
@@ -101,16 +132,20 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
               <button
                 onClick={goToPrevPage}
                 disabled={pageNumber <= 1}
-                className="px-3 py-1 bg-blue-500 text-white rounded disabled:bg-gray-300 hover:bg-blue-600 transition-colors"
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-blue-700 transition-all duration-200 flex items-center space-x-2 shadow-sm"
+                title="Página anterior"
               >
-                ◀ Anterior
+                <span className="text-sm font-medium">←</span>
+                <span className="text-sm font-medium">Anterior</span>
               </button>
               <button
                 onClick={goToNextPage}
                 disabled={pageNumber >= numPages}
-                className="px-3 py-1 bg-blue-500 text-white rounded disabled:bg-gray-300 hover:bg-blue-600 transition-colors"
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-blue-700 transition-all duration-200 flex items-center space-x-2 shadow-sm"
+                title="Página siguiente"
               >
-                Siguiente ▶
+                <span className="text-sm font-medium">Siguiente</span>
+                <span className="text-sm font-medium">→</span>
               </button>
             </div>
           )}
@@ -119,44 +154,41 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
           <div className="flex items-center space-x-2 border-l pl-3">
             <button
               onClick={zoomOut}
-              className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+              className="w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded text-sm flex items-center justify-center transition-colors"
               title="Alejar"
             >
               −
             </button>
-            <span className="text-sm text-gray-600 min-w-[3rem] text-center">
+            <span className="text-sm text-gray-600 min-w-[3rem] text-center font-medium">
               {Math.round(scale * 100)}%
             </span>
             <button
               onClick={zoomIn}
-              className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+              className="w-8 h-8 bg-gray-200 hover:bg-gray-300 rounded text-sm flex items-center justify-center transition-colors"
               title="Acercar"
             >
               +
-            </button>
-            <button
-              onClick={resetZoom}
-              className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded text-xs"
-              title="Zoom normal"
-            >
-              Reset
             </button>
           </div>
 
           {/* Botón cerrar */}
           <button
             onClick={onClose}
-            className="ml-3 px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+            className="ml-3 w-8 h-8 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors flex items-center justify-center shadow-sm"
+            title="Cerrar vista previa"
           >
-            Cerrar ✕
+            ✕
           </button>
         </div>
       </div>
 
-      {/* Contenedor del PDF */}
-      <div className="flex-1 overflow-auto bg-gray-100 p-4">
-        <div className="flex justify-center">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+      {/* Contenedor del PDF con scroll */}
+      <div className="flex-1 overflow-auto bg-gray-100" style={{ 
+        scrollBehavior: 'smooth',
+        WebkitOverflowScrolling: 'touch' // Para mejor scroll en dispositivos móviles
+      }}>
+        <div className="p-4 min-h-full flex justify-center items-start">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-full">
             <Document
               file={pdfUrl}
               onLoadSuccess={({ numPages }) => {
@@ -179,7 +211,7 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
               <Page
                 pageNumber={pageNumber}
                 scale={scale}
-                width={Math.min(containerWidth, 800)}
+                width={Math.min(containerWidth * 0.9, 800)} // Ajustamos el ancho para dejar espacio al scroll
                 loading={
                   <div className="flex items-center justify-center p-4">
                     <div className="animate-pulse bg-gray-200 w-full h-[600px] rounded"></div>
@@ -199,8 +231,8 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl }) => {
       </div>
 
       {/* Footer con información adicional */}
-      <div className="bg-white border-t px-6 py-2 text-xs text-gray-500 flex justify-between items-center">
-        <span>Usa las teclas ← → para navegar entre páginas</span>
+      <div className="bg-white border-t px-6 py-2 text-xs text-gray-500 flex justify-between items-center flex-shrink-0">
+        <span>Usa las teclas ← → para navegar entre páginas, ↑ ↓ para hacer scroll</span>
         {numPages > 0 && (
           <span>Total: {numPages} página{numPages !== 1 ? 's' : ''}</span>
         )}
