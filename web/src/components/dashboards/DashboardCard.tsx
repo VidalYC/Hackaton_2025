@@ -41,15 +41,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({ dashboard }) => (
       <p className="text-blue-100 text-lg">{dashboard.description}</p>
     </div>
 
-    {/* Metrics */}
-    <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 grid grid-cols-3 gap-4">
-      {dashboard.metrics.map((metric, index) => (
-        <div key={index} className="text-center">
-          <div className="text-sm font-semibold text-gray-900">{metric.split(' ')[0]}</div>
-          <div className="text-xs text-gray-500">{metric.split(' ').slice(1).join(' ')}</div>
-        </div>
-      ))}
-    </div>
+    
 
     {/* Embed */}
     <div className="p-6">
