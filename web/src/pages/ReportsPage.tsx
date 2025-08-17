@@ -59,7 +59,7 @@ const ReportsPage: React.FC = () => {
         totalReports={reports.length}
         availableReports={reports.filter(r => r.status === 'available').length}
         totalPages={reports.reduce((acc, r) => acc + r.pages, 0)}
-        departments={5}
+        departments={4}
       />
     </div>
   );
