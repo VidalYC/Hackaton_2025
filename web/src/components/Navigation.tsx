@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Home, Zap, BarChart3, FileText } from 'lucide-react';
+import { Menu, X, Home, Zap, BarChart3, FileText, Activity } from 'lucide-react';
 
 interface NavigationProps {
   currentPage: string;
@@ -20,6 +20,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPage, onPageChange }) =>
     { id: 'home', label: 'Inicio', icon: Home },
     { id: 'dashboards', label: 'Dashboards', icon: BarChart3 },
     { id: 'reports', label: 'Reportes', icon: FileText },
+    { id: 'metrics', label: 'Métricas', icon: Activity },
   ];
 
   return (

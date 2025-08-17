@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import DashboardsPage from './pages/DashboardsPage';
 import ReportsPage from './pages/ReportsPage';
 import { Zap } from 'lucide-react';
+import MetricsPage from './pages/MetricsPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -16,6 +17,8 @@ function App() {
         return <DashboardsPage />;
       case 'reports':
         return <ReportsPage />;
+      case 'metrics':
+        return <MetricsPage />;
       default:
         return <HomePage onPageChange={setCurrentPage} />;
     }
@@ -67,6 +70,14 @@ function App() {
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     Reportes
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setCurrentPage('metrics')} 
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Metricas
                   </button>
                 </li>
               </ul>
