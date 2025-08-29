@@ -1,6 +1,6 @@
 // data/reportsData.js
 const path = require('path');
-const rawData = require(path.join(__dirname, '../../Public/dataProceced/reporte_completo.json'));
+const rawData = require(path.join(__dirname, '../../public/dataProceced/reporte_completo.json'));
 
 const data = rawData;
 
