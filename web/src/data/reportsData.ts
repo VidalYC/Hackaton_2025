@@ -1,4 +1,4 @@
-import rawData from '../../../data/predictions/reporte_completo.json';
+import rawData from '../../Public/dataProceced/reporte_completo.json';
 
 const data = rawData as any;
 
